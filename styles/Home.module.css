@@ -1,0 +1,4 @@
+.citiesContainer {
+  display: grid;
+  grid-template-columns: auto;
+}

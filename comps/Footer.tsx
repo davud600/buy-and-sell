@@ -1,11 +1,7 @@
-import Head from 'next/head'
-
-const Footer = () => {
+export default function Footer() {
   return (
-    <div>
+    <footer>
       <div></div>
-    </div>
+    </footer>
   )
 }
-
-export default Footer
