@@ -1,12 +1,17 @@
+import { useState } from 'react'
 import Link from 'next/link'
+import Modal from './Modal'
+import SidebarMenu from './SidebarMenu'
 
 export default function NavBar() {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false)
+
   return (
-    <nav className="bg-white border-gray-200 px-2 sm:px-4 py-2.5 dark:bg-gray-800">
+    <nav className="relative z-10 py-2.5 bg-white shadow-lg">
       <div className="container flex flex-wrap items-center justify-center mx-auto">
         <Link href="/" className="flex items-center">
-          <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
-            Flowbite
+          <span className="self-center text-xl font-semibold cursor-pointer whitespace-nowrap dark:text-white">
+            Buy &amp; Sell
           </span>
         </Link>
         <div className="flex w-9/12 ml-8 md:order-2">
@@ -43,7 +48,7 @@ export default function NavBar() {
             <input
               type="text"
               id="search-navbar"
-              className="block w-full p-2 pl-10 text-gray-900 border border-gray-300 rounded-lg w-1000 bg-gray-50 sm:text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              className="block w-full p-2 pl-10 text-lg text-gray-900 bg-gray-200 border border-transparent rounded-lg focus:border-gray-300 outline-0 focus:bg-white w-1000"
               placeholder="Search..."
             />
           </div>
@@ -52,7 +57,8 @@ export default function NavBar() {
             type="button"
             className="inline-flex items-center p-2 ml-8 text-sm text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
             aria-controls="mobile-menu-3"
-            aria-expanded="false">
+            aria-expanded="false"
+            onClick={() => setIsSidebarOpen(true)}>
             <svg
               className="w-6 h-6"
               fill="currentColor"
@@ -76,6 +82,9 @@ export default function NavBar() {
           </button>
         </div>
       </div>
+      <Modal open={isSidebarOpen} onClose={() => setIsSidebarOpen(false)}>
+        <SidebarMenu onClose={() => setIsSidebarOpen(false)} />
+      </Modal>
     </nav>
   )
 }
