@@ -38,7 +38,7 @@ export default function NavBar() {
           <button
             data-collapse-toggle="mobile-menu-3"
             type="button"
-            className="inline-flex items-center ml-2 text-gray-500 rounded-lg p sm:p-2 sm:ml-4 hover:bg-gray-100 focus:outline-none"
+            className="inline-flex items-center ml-2 text-gray-500 rounded-lg p sm:p-2 sm:ml-4 hover:bg-gray-200 focus:outline-none"
             aria-controls="mobile-menu-3"
             aria-expanded="false"
             onClick={() => setIsSidebarOpen(true)}>
