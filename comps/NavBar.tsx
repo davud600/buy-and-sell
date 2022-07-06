@@ -66,7 +66,7 @@ export default function NavBar() {
         </div>
       </div>
       <Modal open={isSidebarOpen} onClose={() => setIsSidebarOpen(false)}>
-        <SidebarMenu onClose={() => setIsSidebarOpen(false)} />
+        <SidebarMenu />
       </Modal>
     </nav>
   )
