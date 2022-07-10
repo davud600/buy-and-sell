@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import NavBar from '../comps/NavBar'
 import Footer from '../comps/Footer'
 import Head from 'next/head'
@@ -30,9 +31,11 @@ export default function Home() {
               <span className="text-lg font-bold sm:text-2xl">
                 Popular items
               </span>
-              <span className="font-semibold text-gray-500  text-md sm:text-lg font-small">
-                See all &gt;
-              </span>
+              <Link href="/popular-items">
+                <span className="px-2 py-1 font-semibold text-gray-500 transition-colors rounded-lg cursor-pointer hover:bg-gray-200 focus:bg-gray-300 text-md sm:text-lg font-small">
+                  See all &gt;
+                </span>
+              </Link>
             </div>
             <PopularItems />
           </div>

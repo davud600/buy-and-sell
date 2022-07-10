@@ -17,7 +17,16 @@ export default function SidebarMenu() {
     <div
       ref={sidebarElement}
       className="absolute inset-y-0 right-0 z-10 m-0 transition-all bg-white sidebar-menu w-72">
-      <div className="text-white bg-gray-800 h-44"></div>
+      <div className="flex text-white bg-gray-800 h-44">
+        <div className="relative h-100% px-10 w-screen">
+          <Link href="/login">
+            <span className="absolute bottom-0 self-end px-2 py-1 mb-5 text-lg font-semibold cursor-pointer">
+              Log In
+            </span>
+          </Link>
+        </div>
+        {/* if logged in */}
+      </div>
       <div className="flex flex-col divide-y-2">
         <div className="flex flex-col">
           <Link href="/">

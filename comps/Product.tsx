@@ -4,7 +4,7 @@ import product1image from '../public/images/2.jpg'
 
 export default function Product({ product_id }: any) {
   return (
-    <div className="bg-white border border-gray-200 border-solid rounded-md ">
+    <div className="flex flex-col justify-between bg-white border border-gray-200 border-solid rounded-md aspect-square">
       <div className="h-40">
         {/* <Image
           src={product_id === 0 ? product0image : product1image}
