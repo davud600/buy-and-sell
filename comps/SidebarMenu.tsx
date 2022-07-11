@@ -20,10 +20,18 @@ export default function SidebarMenu() {
       <div className="flex text-white bg-gray-800 h-44">
         <div className="relative h-100% px-10 w-screen">
           <Link href="/login">
-            <span className="absolute bottom-0 self-end px-2 py-1 mb-5 text-lg font-semibold cursor-pointer">
+            <span className="absolute self-end py-1 mb-5 text-lg font-semibold cursor-pointer bottom-8">
               Log In
             </span>
           </Link>
+          <div className="absolute bottom-0 self-end mb-5 text-md">
+            <span className="font-semibold text-gray-500">
+              Dont have an account?{' '}
+            </span>
+            <Link href="/signup">
+              <span className="font-semibold cursor-pointer">Sign up</span>
+            </Link>
+          </div>
         </div>
         {/* if logged in */}
       </div>
