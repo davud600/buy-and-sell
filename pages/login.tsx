@@ -6,11 +6,11 @@ export default function login() {
       <div className="h-full px-6 text-gray-800">
         <div className="flex flex-wrap items-center justify-center h-full xl:justify-center lg:justify-between g-6">
           <div className="mb-12 grow-0 shrink-1 md:shrink-0 basis-auto xl:w-6/12 lg:w-6/12 md:w-9/12 md:mb-0">
-            <img
+            {/* <img
               src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
               className="w-full"
               alt="Sample image"
-            />
+            /> */}
           </div>
           <div className="mb-12 xl:ml-20 xl:w-5/12 lg:w-5/12 md:w-8/12 md:mb-0">
             <form>
